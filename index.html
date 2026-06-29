@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sausage Therapy Academy • Dachshund Empire Blueprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+        }
+
+        .premium-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .token-ca {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            letter-spacing: -0.5px;
+        }
+
+        .meme-overlay {
+            position: relative;
+        }
+        
+        .meme-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.65) 85%);
+            border-radius: 16px;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-800 bg-zinc-950/95 backdrop-blur-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-11 h-11 bg-amber-900 rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-dog text-3xl text-amber-300"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-2xl tracking-tighter">SAUSAGE THERAPY</div>
+                        <div class="text-[10px] text-zinc-500 -mt-1">ACADEMY</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm">
+                    <a href="#academy" class="hover:text-amber-400 transition-colors">The Academy</a>
+                    <a href="#sausage-army" class="hover:text-amber-400 transition-colors">The Sausage Army</a>
+                    <a href="#curriculum" class="hover:text-amber-400 transition-colors">Curriculum</a>
+                    <a href="#utility" class="hover:text-amber-400 transition-colors">Token Utility</a>
+                </div>
+                
+                <div class="flex items-center gap-x-3">
+                    <a href="https://jup.ag/studio" target="_blank" 
+                       class="px-5 py-2.5 text-sm font-semibold border border-zinc-700 hover:bg-zinc-900 rounded-3xl transition-all flex items-center gap-x-2">
+                        <i class="fa-brands fa-solana"></i>
+                        <span>Jupiter Studio</span>
+                    </a>
+                    <button onclick="copyCA()" 
+                            class="px-6 py-2.5 bg-amber-600 hover:bg-amber-500 text-white text-sm font-bold rounded-3xl flex items-center gap-x-2 transition-all active:scale-[0.985]">
+                        <i class="fa-solid fa-copy"></i>
+                        <span class="hidden sm:inline">Copy CA</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-7xl mx-auto px-6 pt-16 pb-20">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+                <div class="inline-flex items-center gap-x-2 bg-zinc-900 border border-zinc-800 rounded-3xl px-4 py-1.5 mb-6">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-xs font-mono tracking-[2px] text-emerald-400">NOW LIVE ON JUPITER STUDIO</span>
+                </div>
+                
+                <h1 class="text-7xl md:text-8xl leading-[0.92] font-black tracking-tighter heading-serif mb-6">
+                    SHORT LEGS.<br>
+                    <span class="text-amber-400">MASSIVE EMPIRE.</span>
+                </h1>
+                
+                <p class="max-w-lg text-xl text-zinc-400 mb-8">
+                    The official Sausage Therapy Academy + $SAUSAGE token. 
+                    Build your dachshund-powered wellness &amp; retreat empire while the meme army prints.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#sausage-army" 
+                       class="px-10 py-4 bg-white text-zinc-950 font-bold text-lg rounded-3xl flex items-center justify-center gap-x-3 hover:bg-amber-100 transition-all active:scale-[0.985]">
+                        <span>JOIN THE SAUSAGE ARMY</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    
+                    <button onclick="document.getElementById('sausage-army').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-8 py-4 border border-white/30 hover:bg-white/5 font-semibold rounded-3xl flex items-center justify-center gap-x-2 transition-all">
+                        <i class="fa-solid fa-play"></i>
+                        <span>Watch 47s Trailer</span>
+                    </button>
+                </div>
+                
+                <div class="flex items-center gap-x-6 mt-8 text-sm">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 bg-zinc-700 border border-zinc-800 rounded-full ring-2 ring-zinc-950"></div>
+                        <div class="w-7 h-7 bg-zinc-700 border border-zinc-800 rounded-full ring-2 ring-zinc-950"></div>
+                        <div class="w-7 h-7 bg-zinc-700 border border-zinc-800 rounded-full ring-2 ring-zinc-950"></div>
+                    </div>
+                    <div class="text-xs text-zinc-500">2,847 dachshund lovers &amp; empire builders already in</div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-5 relative">
+                <div class="aspect-[4/3] bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
+                    <img src="https://picsum.photos/id/1011/1200/900" alt="Cream dachshund at golden hour on Noosa acreage" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- THE SAUSAGE ARMY SECTION -->
+    <div id="sausage-army" class="bg-zinc-900 border-y border-zinc-800 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12 items-start">
+                
+                <div class="lg:w-5/12">
+                    <div class="sticky top-24">
+                        <div class="uppercase tracking-[3px] text-xs font-mono text-amber-500 mb-3">THE MEME LAYER OF THE EMPIRE</div>
+                        <h2 class="section-header heading-serif tracking-tighter mb-6">Join the<br>Sausage Army</h2>
+                        
+                        <div class="space-y-6 text-zinc-300">
+                            <p class="text-lg">The official $SAUSAGE token on Jupiter Studio. Pure dachshund degen energy meets real empire-building utility.</p>
+                            
+                            <div>
+                                <div class="text-xs uppercase tracking-widest text-zinc-500 mb-2">TOKEN CONTRACT ADDRESS</div>
+                                <div onclick="copyCA()" 
+                                     class="token-ca cursor-pointer bg-zinc-950 border border-zinc-700 hover:border-amber-600 px-5 py-3.5 rounded-2xl font-mono text-sm break-all active:bg-zinc-800 transition-all flex items-center justify-between group">
+                                    <span>CHuVCZjy7wzK2A4pLqAFCgiXX1A2cUwmeMHdpjW6FqUX</span>
+                                    <i class="fa-solid fa-copy text-amber-500 group-active:scale-90 transition"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-3">
+                                <a href="https://jup.ag/studio" target="_blank" 
+                                   class="flex-1 px-6 py-3.5 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-3xl flex items-center justify-center gap-x-2 text-sm transition-all">
+                                    <i class="fa-brands fa-solana"></i>
+                                    <span>BUY ON JUPITER STUDIO</span>
+                                </a>
+                                <button onclick="window.open('https://dexscreener.com/solana/CHuVCZjy7wzK2A4pLqAFCgiXX1A2cUwmeMHdpjW6FqUX', '_blank')" 
+                                        class="px-6 py-3.5 border border-white/30 hover:bg-white/5 rounded-3xl text-sm font-semibold flex items-center justify-center gap-x-2">
+                                    <span>DEXSCREENER</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-7/12 space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="premium-card bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden">
+                            <div class="meme-overlay">
+                                <img src="https://raw.githubusercontent.com/forevermore63/sausage-therapy-academy/main/images/cvAMg.jpg" alt="Everyone needs a sausage in their assienal meme" class="w-full aspect-[4/3] object-cover">
+                            </div>
+                            <div class="p-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <div class="font-bold">EVERYONE NEEDS A SAUSAGE</div>
+                                        <div class="text-xs text-zinc-500">IN THEIR ASSIENAL</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="premium-card bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden">
+                            <div class="meme-overlay">
+                                <img src="https://raw.githubusercontent.com/forevermore63/sausage-therapy-academy/main/images/DGn57.jpg" alt="Get a wiener in your empire meme" class="w-full aspect-[4/3] object-cover">
+                            </div>
+                            <div class="p-5">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <div class="font-bold">GET A WIENER</div>
+                                        <div class="text-xs text-zinc-500">IN YOUR EMPIRE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="utility" class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+                        <div class="uppercase text-xs tracking-[2px] text-amber-500 font-mono mb-4">REAL UTILITY. NOT JUST MEME.</div>
+                        <h3 class="text-3xl font-bold tracking-tight mb-6">Hold $SAUSAGE → Unlock Empire Perks</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="bg-zinc-900 rounded-2xl p-5">
+                                <i class="fa-solid fa-graduation-cap text-2xl text-amber-400 mb-3"></i>
+                                <div class="font-semibold mb-1">Academy Discount</div>
+                                <div class="text-xs text-zinc-400">10–25% off course &amp; membership for holders</div>
+                            </div>
+                            <div class="bg-zinc-900 rounded-2xl p-5">
+                                <i class="fa-solid fa-gift text-2xl text-amber-400 mb-3"></i>
+                                <div class="font-semibold mb-1">Exclusive Airdrops</div>
+                                <div class="text-xs text-zinc-400">New visuals, modules &amp; retreat invites dropped to holders first</div>
+                            </div>
+                            <div class="bg-zinc-900 rounded-2xl p-5">
+                                <i class="fa-solid fa-lock text-2xl text-amber-400 mb-3"></i>
+                                <div class="font-semibold mb-1">Token-Gated Access</div>
+                                <div class="text-xs text-zinc-400">Private community calls, early litter access &amp; retreat priority</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academy & Curriculum -->
+    <div id="academy" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="max-w-2xl mb-12">
+            <div class="text-amber-500 text-xs tracking-[3px] font-mono mb-3">THE REAL ENGINE BEHIND THE MEME</div>
+            <h2 class="section-header heading-serif tracking-tighter">Build Your Own<br>Dachshund Wellness Empire</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="premium-card bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
+                <div class="text-amber-400 mb-4"><i class="fa-solid fa-dog text-4xl"></i></div>
+                <div class="font-bold text-2xl mb-3">Therapy Dog Mastery</div>
+                <div class="text-zinc-400 text-sm">Temperament selection, training protocols, cancer detection foundations, placement &amp; NDIS integration.</div>
+            </div>
+            <div class="premium-card bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
+                <div class="text-amber-400 mb-4"><i class="fa-solid fa-home text-4xl"></i></div>
+                <div class="font-bold text-2xl mb-3">Acreage Retreat Design</div>
+                <div class="text-zinc-400 text-sm">Sanctuary layout, humidity &amp; biofilm management, guest experience, security, and scaling to multiple properties.</div>
+            </div>
+            <div class="premium-card bg-zinc-900 border border-zinc-800 p-8 rounded-3xl">
+                <div class="text-amber-400 mb-4"><i class="fa-solid fa-chart-line text-4xl"></i></div>
+                <div class="font-bold text-2xl mb-3">Visual + Passive Empire</div>
+                <div class="text-zinc-400 text-sm">The exact automated pipeline we use: stock uploads, meme content, Shopify funnels, and compounding royalties.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="curriculum" class="bg-zinc-900 py-16 border-y border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <div class="text-xs text-amber-500 tracking-widest">8 MODULES • SELF-PACED + LIVE SUPPORT</div>
+                <div class="text-4xl font-bold tracking-tight">The Wiener Empire Blueprint</div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm max-w-5xl mx-auto">
+                <div class="bg-zinc-950 p-5 rounded-2xl border-l-4 border-amber-600">1. Therapy Temperament &amp; Breeding Ethics</div>
+                <div class="bg-zinc-950 p-5 rounded-2xl border-l-4 border-amber-600">2. Advanced Training &amp; Placement Systems</div>
+                <div class="bg-zinc-950 p-5 rounded-2xl border-l-4 border-amber-600">3. Acreage Sanctuary &amp; Retreat Design</div>
+                <div class="bg-zinc-950 p-5 rounded-2xl border-l-4 border-amber-600">4. NDIS Provider Setup &amp; Compliance</div>
+                <div class="bg-zinc-950 p-5 rounded-2xl border-l-4 border-amber-600">5. Automated Visual Content Empire</div>
+                <div class="bg-zinc-950 p-5 rounded-2xl border-l-4 border-amber-600">6. Funnels, Shopify &amp; Membership Machines</div>
+                <div class="bg-zinc-950 p-5 rounded-2xl border-l-4 border-amber-600">7. Resilience &amp; Conscious Leadership</div>
+                <div class="bg-zinc-950 p-5 rounded-2xl border-l-4 border-amber-600">8. Scaling to Multi-Property Empire</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <div class="max-w-md mx-auto">
+            <h3 class="text-4xl font-bold tracking-tighter mb-4">Ready to put a sausage in your empire?</h3>
+            <p class="text-zinc-400 mb-8">Buy $SAUSAGE now. Join the Academy. Start building the life (and the pack) you actually want.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="copyCA()" class="px-9 py-4 bg-white text-zinc-950 font-extrabold rounded-3xl text-lg flex items-center justify-center gap-x-3 active:scale-[0.985] transition-all">
+                    <span>COPY CA &amp; BUY $SAUSAGE</span>
+                </button>
+                <a href="#sausage-army" class="px-9 py-4 border border-white/30 hover:bg-white/5 font-semibold rounded-3xl text-lg flex items-center justify-center gap-x-3 transition-all">
+                    <span>JOIN THE SAUSAGE ARMY</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-800 py-8 text-center text-xs text-zinc-500">
+        <div class="max-w-6xl mx-auto px-6">© 2026 Sausage Therapy Academy • Forevermore Farm • Noosa Dachshunds • @TherapySausages</div>
+    </footer>
+
+    <script>
+        function copyCA() {
+            const ca = "CHuVCZjy7wzK2A4pLqAFCgiXX1A2cUwmeMHdpjW6FqUX";
+            navigator.clipboard.writeText(ca).then(() => {
+                const toast = document.createElement('div');
+                toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-sm px-5 py-2.5 rounded-3xl flex items-center gap-x-2 shadow-xl z-[999]`;
+                toast.innerHTML = `<i class="fa-solid fa-check-double mr-2"></i> <span>CA copied — go buy that sausage</span>`;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 2400);
+            }).catch(() => {
+                prompt("Copy CA:", ca);
+            });
+        }
+    </script>
+</body>
+</html>
